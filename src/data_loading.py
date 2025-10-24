@@ -3,7 +3,7 @@
 import os
 import pandas as pd
 
-def load_data(input_path: str, save_raw: bool = True, raw_path: str = "Data/raw/dataset_raw.csv") -> pd.DataFrame:
+def Load_data(input_path: str, save_raw: bool = True, raw_path: str = "Data/raw/dataset_raw.csv") -> pd.DataFrame:
     
     df = pd.read_csv(input_path)
     print(f"[data_loading] Loaded data from {input_path} with shape {df.shape}")

@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 from src.utils import save_json
 
-def evaluate_and_save(model, X_test, y_test, outputs_dir="outputs"):
+def Evaluate_and_save(model, X_test, y_test, outputs_dir="outputs"):
     preds = model.predict(X_test)
     mae = mean_absolute_error(y_test, preds)
     mse = mean_squared_error(y_test, preds)
