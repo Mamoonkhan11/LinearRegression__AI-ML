@@ -11,5 +11,5 @@ def Train_model(X, y, model_output_path="outputs/models/linear_regression.pkl", 
     model = LinearRegression()
     model.fit(X_train, y_train)
     Save_model(model, model_output_path)
-    print(f"[train] Model trained and saved to {model_output_path}")
+    print(f"\n [train] Model trained and saved to {model_output_path} \n")
     return model, X_train, X_test, y_train, y_test

@@ -6,7 +6,7 @@ import seaborn as sns
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import pandas as pd
 import numpy as np
-from src.utils import save_json
+from src.utils import Save_json
 
 def Evaluate_and_save(model, X_test, y_test, outputs_dir="outputs"):
     preds = model.predict(X_test)
@@ -17,8 +17,8 @@ def Evaluate_and_save(model, X_test, y_test, outputs_dir="outputs"):
 
     metrics = {"MAE": mae, "MSE": mse, "RMSE": rmse, "R2": r2}
     os.makedirs(os.path.join(outputs_dir, "metrics"), exist_ok=True)
-    save_json(metrics, os.path.join(outputs_dir, "metrics", "metrics.json"))
-    print(f"[evaluate] Metrics saved to {os.path.join(outputs_dir, 'metrics', 'metrics.json')}")
+    Save_json(metrics, os.path.join(outputs_dir, "metrics", "metrics.json"))
+    print(f"\n [evaluate] Metrics saved to {os.path.join(outputs_dir, 'metrics', 'metrics.json')} \n")
 
     # Plot: Actual vs Predicted
     os.makedirs(os.path.join(outputs_dir, "figures"), exist_ok=True)
@@ -32,7 +32,7 @@ def Evaluate_and_save(model, X_test, y_test, outputs_dir="outputs"):
     out_path = os.path.join(outputs_dir, "figures", "actual_vs_predicted.png")
     plt.savefig(out_path)
     plt.close()
-    print(f"[evaluate] Actual vs Predicted plot saved to {out_path}")
+    print(f"\n [evaluate] Actual vs Predicted plot saved to {out_path} \n")
 
     # Plot: Residuals Distribution
     residuals = y_test - preds
@@ -43,6 +43,6 @@ def Evaluate_and_save(model, X_test, y_test, outputs_dir="outputs"):
     res_path = os.path.join(outputs_dir, "figures", "residuals_distribution.png")
     plt.savefig(res_path)
     plt.close()
-    print(f"[evaluate] Residuals plot saved to {res_path}")
+    print(f"\n [evaluate] Residuals plot saved to {res_path} \n")
 
     return metrics

@@ -1,6 +1,5 @@
 # Preprocessing functions for data cleaning and transformation
 
-# src/preprocessing.py
 import os
 import pandas as pd
 from sklearn.impute import SimpleImputer
@@ -17,7 +16,7 @@ def Get_default_preprocessor(numeric_features, categorical_features):
 
     categorical_transformer = Pipeline(steps=[
         ("imputer", SimpleImputer(strategy="most_frequent")),
-        ("onehot", OneHotEncoder(handle_unknown="ignore", sparse=False))
+        ("onehot", OneHotEncoder(handle_unknown="ignore", sparse_output=False))
     ])
 
     preprocessor = ColumnTransformer(transformers=[
@@ -32,7 +31,7 @@ def Preprocess(df: pd.DataFrame,
                numeric_features: list,
                categorical_features: list,
                save_processed: bool = True,
-               processed_path: str = "Data/processed/dataset_processed.csv"):
+               processed_path: str = "Data/processed/Housing.csv"):
     
     df = df.copy()
     # Separate features and target
@@ -58,6 +57,6 @@ def Preprocess(df: pd.DataFrame,
     if save_processed:
         os.makedirs(os.path.dirname(processed_path), exist_ok=True)
         pd.concat([X_df, y.reset_index(drop=True)], axis=1).to_csv(processed_path, index=False)
-        print(f"[preprocessing] Processed dataset saved to {processed_path}")
+        print(f"\n [preprocessing] Processed dataset saved to {processed_path} \n")
 
     return X_df, y, preprocessor
