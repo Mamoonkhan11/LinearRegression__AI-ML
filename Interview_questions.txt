@@ -1,0 +1,40 @@
+1️. What assumptions does linear regression make?
+
+Linear relationship between features and target
+Residuals are normally distributed
+Homoscedasticity (constant variance of errors)
+No multicollinearity among predictors
+Errors are independent
+
+2️. How do you interpret the coefficients?
+Each coefficient shows how much the target variable changes for a one-unit increase in that feature, keeping others constant.
+
+3️. What is R² score and its significance?
+
+R² measures how much of the target’s variance is explained by the model.
+Value ranges from 0 to 1
+Closer to 1 → better model fit
+
+4️. When would you prefer MSE over MAE?
+
+Use MSE when you want to penalize larger errors more, since it squares them.
+Use MAE for more robustness to outliers.
+
+5️. How do you detect multicollinearity?
+Check correlation matrix for highly correlated features (r > 0.8)
+Use Variance Inflation Factor (VIF) — VIF > 10 indicates strong multicollinearity
+
+6️. What is the difference between simple and multiple regression?
+Simple regression: 1 independent variable → 1 dependent variable
+Multiple regression: 2 or more independent variables → 1 dependent variable
+
+7️. Can linear regression be used for classification?
+
+Not ideal. Linear regression predicts continuous values, not classes.
+Use Logistic Regression for binary or categorical classification.
+
+8️. What happens if you violate regression assumptions?
+Model accuracy drops
+Coefficients become unreliable
+Standard errors and p-values may be invalid
+Predictions may be biased or inconsistent
