@@ -1,11 +1,11 @@
-# 🏠 Task 3 — Linear Regression (House Price Prediction)
+# Task 3 — Linear Regression (House Price Prediction)
 
 A complete **Machine Learning pipeline** using **Linear Regression** to predict house prices based on various property features.  
 This project demonstrates data preprocessing, encoding, model training, evaluation, and visualization — following a clean, modular structure.
 
 ---
 
-## 📘 Overview
+## Overview
 This project implements an **end-to-end regression workflow** using Python and Scikit-learn.  
 You’ll learn how to:
 - Prepare raw housing data for machine learning.
@@ -16,7 +16,7 @@ You’ll learn how to:
 
 ---
 
-## 🎯 Objectives
+## Objectives
 - Load and clean the housing dataset.  
 - Encode non-numeric features (e.g., *furnishingstatus*, *mainroad*).  
 - Train a Linear Regression model to predict `price`.  
@@ -25,7 +25,7 @@ You’ll learn how to:
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 ```
 Task3-Linear-Regression/
 │
@@ -57,7 +57,7 @@ Task3-Linear-Regression/
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 1. **Data Loading** — Reads raw CSV and stores a copy in `data/raw/`.
 2. **Preprocessing** — Cleans data, encodes categorical columns, and scales numeric features.
 3. **Model Training** — Splits data (train/test) and fits a `LinearRegression()` model.
@@ -66,7 +66,7 @@ Task3-Linear-Regression/
 
 ---
 
-## 🧰 Tools & Libraries
+## Tools & Libraries
 - **Python 3.12+**
 - **pandas**, **numpy**
 - **scikit-learn**
@@ -80,7 +80,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Run the Project
+## ▶ Run the Project
 1. Place your dataset (e.g., `Housing.csv`) into `data/raw/`.
 2. Run the full pipeline:
    ```bash
@@ -96,15 +96,6 @@ pip install -r requirements.txt
 
 ---
 
-## 📊 Example Visuals
-
-- **Actual vs Predicted**
-  ![Actual vs Predicted](outputs/figures/actual_vs_predicted.png)
-
-- **Residuals Distribution**
-  ![Residuals Plot](outputs/figures/residuals_distribution.png)
-
----
 
 ## 📈 Evaluation Metrics
 | Metric | Description | Ideal Value |
@@ -115,7 +106,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📚 Learning Outcomes
+## Learning Outcomes
 - Understand how Linear Regression works for numerical prediction.  
 - Gain hands-on experience with data preprocessing and encoding.  
 - Evaluate regression performance using standard metrics.  
@@ -124,7 +115,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📎 References
+## References
 - Dataset: [Housing Dataset (Kaggle)](https://www.kaggle.com/datasets/yasserh/housing-prices-dataset)  
 - Guide: *AI & ML Internship Task 3 — Linear Regression*
 
